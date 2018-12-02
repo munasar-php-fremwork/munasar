@@ -55,11 +55,6 @@ $container['HomeController'] = function ($container) {
     return new \Munasar\Controllers\HomeController($container);
 };
 
-$container['validator'] = function ($container) {
-    return new Munasar\Validation\Validator;
-};
-
-
 $container['csrf'] = function ($container) {
     return new \Slim\Csrf\Guard;
 };
