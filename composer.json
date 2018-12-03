@@ -1,5 +1,5 @@
 {
-     "name": "munasar/php",
+     "name": "caaqil/php",
     "description": "Waa PHP Fremwork somali ah",
     "license": [
         "RPL-1.5",
@@ -13,12 +13,12 @@
     ],
     "authors": [
         {
-            "name": "Munasar",
+            "name": "Munasar Abuukar",
             "email": "dj.caaqil@gmail.com",
             "role": "Founder"
         },
         {
-            "name": "SteveJobzniak",
+            "name": "Munasar Abuukar",
             "homepage": "https://github.com/caaqilyare",
             "role": "Developer"
         }
@@ -34,7 +34,7 @@
     } ,
     "autoload": {
         "psr-4": {
-            "Munasar\\" : "app"
+            "Caaqil\\" : "app"
         } 
     }
 }

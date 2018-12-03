@@ -2,6 +2,7 @@
 
 require __DIR__. '/../vendor/autoload.php';
 session_start();
+define('URL' , 'http://localhost/laalaabte/public');
 use Respect\Validation\Validator as v;
 
 $app = new \Slim\App([
@@ -10,7 +11,7 @@ $app = new \Slim\App([
         'db' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'Your Databse',
+            'database'  => 'laalaabte',
             'username'  => 'root',
             'password'  => '',
             'charset'   => 'utf8',
@@ -52,8 +53,13 @@ $container['view'] = function ($container) {
 };
 
 $container['HomeController'] = function ($container) {
-    return new \Munasar\Controllers\HomeController($container);
+    return new \Caaqil\Controllers\HomeController($container);
 };
+
+$container['validator'] = function ($container) {
+    return new Caaqil\Validation\Validator;
+};
+
 
 $container['csrf'] = function ($container) {
     return new \Slim\Csrf\Guard;
@@ -68,9 +74,9 @@ $app->getContainer()['notFoundHandler'] = function ($c) {
     };
 };
 
-$app->add(new Munasar\Middleware\ValidationErrorsMiddleware($container));
-$app->add(new Munasar\Middleware\OldInputMiddleware($container));
-$app->add(new Munasar\Middleware\CsrfViewMiddleware($container));
+$app->add(new Caaqil\Middleware\ValidationErrorsMiddleware($container));
+$app->add(new Caaqil\Middleware\OldInputMiddleware($container));
+$app->add(new Caaqil\Middleware\CsrfViewMiddleware($container));
 $app->add($container->csrf);
-v::with('Munasar\\Validation\\Rules\\');
+v::with('Caaqil\\Validation\\Rules\\');
 require __DIR__ . '/../app/routes.php';

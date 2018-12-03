@@ -1,5 +1,5 @@
 <?php
-namespace Munasar\Controllers;
+namespace Caaqil\Controllers;
 
 class Controller {
          protected $container;

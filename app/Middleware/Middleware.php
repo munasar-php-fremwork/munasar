@@ -1,6 +1,6 @@
 <?php
 
-namespace Munasar\Middleware;
+namespace Caaqil\Middleware;
 
 class Middleware {
     
