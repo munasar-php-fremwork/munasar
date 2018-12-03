@@ -1,25 +1,15 @@
 {
-     "name": "caaqil/php",
-    "description": "Waa PHP Fremwork somali ah",
-    "license": [
-        "RPL-1.5",
-        "proprietary"
-    ],
-    "keywords": [
-        "Somali php",
-        "Somali",
-        "API",
-        "PHP"
-    ],
+    "name": "caaqil/php",
+    "type": "php fremwork",
+    "description": "Logging for PHP 5.3",
+    "keywords": ["log","logging"],
+    "homepage": "https://github.com/caaqilyare",
+    "license": "MIT",
     "authors": [
         {
             "name": "Munasar Abuukar",
-            "email": "dj.caaqil@gmail.com",
-            "role": "Founder"
-        },
-        {
-            "name": "Munasar Abuukar",
-            "homepage": "https://github.com/caaqilyare",
+            "email": "dj.caaqil@@gmail.com",
+            "homepage": "http://munasar.ga",
             "role": "Developer"
         }
     ],
@@ -31,7 +21,7 @@
         "respect/validation": "^1.1",
         "slim/csrf": "^0.8.3",
         "slim/flash": "^0.4.0"
-    } ,
+    },
     "autoload": {
         "psr-4": {
             "Caaqil\\" : "app"
